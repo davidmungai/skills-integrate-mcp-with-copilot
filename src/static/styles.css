@@ -16,7 +16,6 @@ body {
 }
 
 header {
-  text-align: center;
   padding: 20px 0;
   margin-bottom: 30px;
   background-color: #1a237e;
@@ -24,8 +23,56 @@ header {
   border-radius: 5px;
 }
 
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 0 20px;
+  text-align: left;
+}
+
 header h1 {
   margin-bottom: 10px;
+}
+
+.user-menu {
+  position: relative;
+}
+
+.icon-btn {
+  background-color: #ffffff;
+  color: #1a237e;
+  border: 1px solid #dbe1ff;
+  font-weight: bold;
+}
+
+.icon-btn:hover {
+  background-color: #f4f6ff;
+}
+
+.dropdown {
+  position: absolute;
+  right: 0;
+  top: 46px;
+  background-color: #ffffff;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+  min-width: 160px;
+  z-index: 20;
+}
+
+.dropdown-item {
+  width: 100%;
+  text-align: left;
+  background-color: #ffffff;
+  color: #1a237e;
+  border-radius: 0;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f3ff;
 }
 
 main {
@@ -55,6 +102,11 @@ section h3 {
   padding-bottom: 10px;
   border-bottom: 1px solid #ddd;
   color: #1a237e;
+}
+
+.teacher-status {
+  margin-bottom: 12px;
+  color: #374151;
 }
 
 .activity-card {
@@ -111,12 +163,12 @@ section h3 {
 }
 
 .delete-btn {
-  background: none;
-  border: none;
+  background-color: #ffe8e8;
+  border: 1px solid #ef9a9a;
   color: #c62828;
   cursor: pointer;
-  font-size: 14px;
-  padding: 2px 5px;
+  font-size: 12px;
+  padding: 3px 8px;
   transition: all 0.2s;
   border-radius: 3px;
 }
@@ -190,6 +242,51 @@ button:hover {
 
 .hidden {
   display: none;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 30;
+}
+
+.modal-content {
+  width: 100%;
+  max-width: 420px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.secondary-btn {
+  background-color: #6b7280;
+}
+
+.secondary-btn:hover {
+  background-color: #4b5563;
+}
+
+@media (max-width: 700px) {
+  .header-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .user-menu {
+    align-self: flex-end;
+  }
 }
 
 footer {
